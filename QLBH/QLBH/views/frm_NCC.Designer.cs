@@ -44,6 +44,7 @@
             this.txt_mancc = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btn_refresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -67,7 +68,7 @@
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 159F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel1.Size = new System.Drawing.Size(605, 554);
+            this.tablePanel1.Size = new System.Drawing.Size(611, 560);
             this.tablePanel1.TabIndex = 23;
             // 
             // dataGridView1
@@ -78,19 +79,20 @@
             this.tablePanel1.SetColumn(this.dataGridView1, 0);
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 132);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 162);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.tablePanel1.SetRow(this.dataGridView1, 1);
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(599, 419);
+            this.dataGridView1.Size = new System.Drawing.Size(605, 395);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.DataGridView1_DoubleClick);
             // 
             // panelControl1
             // 
             this.tablePanel1.SetColumn(this.panelControl1, 0);
+            this.panelControl1.Controls.Add(this.btn_refresh);
             this.panelControl1.Controls.Add(this.txt_dienthoaincc);
             this.panelControl1.Controls.Add(this.labelControl4);
             this.panelControl1.Controls.Add(this.txt_diachincc);
@@ -107,13 +109,13 @@
             this.panelControl1.Location = new System.Drawing.Point(3, 3);
             this.panelControl1.Name = "panelControl1";
             this.tablePanel1.SetRow(this.panelControl1, 0);
-            this.panelControl1.Size = new System.Drawing.Size(599, 123);
+            this.panelControl1.Size = new System.Drawing.Size(605, 153);
             this.panelControl1.TabIndex = 17;
             // 
             // txt_dienthoaincc
             // 
             this.txt_dienthoaincc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_dienthoaincc.Location = new System.Drawing.Point(379, 42);
+            this.txt_dienthoaincc.Location = new System.Drawing.Point(382, 57);
             this.txt_dienthoaincc.Name = "txt_dienthoaincc";
             this.txt_dienthoaincc.Size = new System.Drawing.Size(171, 20);
             this.txt_dienthoaincc.TabIndex = 20;
@@ -121,7 +123,7 @@
             // labelControl4
             // 
             this.labelControl4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl4.Location = new System.Drawing.Point(318, 46);
+            this.labelControl4.Location = new System.Drawing.Point(321, 61);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(55, 13);
             this.labelControl4.TabIndex = 19;
@@ -130,7 +132,7 @@
             // txt_diachincc
             // 
             this.txt_diachincc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_diachincc.Location = new System.Drawing.Point(379, 12);
+            this.txt_diachincc.Location = new System.Drawing.Point(382, 27);
             this.txt_diachincc.Name = "txt_diachincc";
             this.txt_diachincc.Size = new System.Drawing.Size(171, 20);
             this.txt_diachincc.TabIndex = 18;
@@ -138,7 +140,7 @@
             // labelControl3
             // 
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl3.Location = new System.Drawing.Point(335, 15);
+            this.labelControl3.Location = new System.Drawing.Point(338, 30);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(38, 13);
             this.labelControl3.TabIndex = 17;
@@ -148,7 +150,7 @@
             // 
             this.btn_Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.ImageOptions.Image")));
-            this.btn_Delete.Location = new System.Drawing.Point(303, 84);
+            this.btn_Delete.Location = new System.Drawing.Point(365, 100);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(108, 36);
             this.btn_Delete.TabIndex = 16;
@@ -159,7 +161,7 @@
             // 
             this.btn_close.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_close.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.ImageOptions.Image")));
-            this.btn_close.Location = new System.Drawing.Point(417, 84);
+            this.btn_close.Location = new System.Drawing.Point(479, 100);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(108, 36);
             this.btn_close.TabIndex = 15;
@@ -170,7 +172,7 @@
             // 
             this.btn_refesrh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_refesrh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_refesrh.ImageOptions.Image")));
-            this.btn_refesrh.Location = new System.Drawing.Point(189, 84);
+            this.btn_refesrh.Location = new System.Drawing.Point(134, 100);
             this.btn_refesrh.Name = "btn_refesrh";
             this.btn_refesrh.Size = new System.Drawing.Size(108, 36);
             this.btn_refesrh.TabIndex = 13;
@@ -181,7 +183,7 @@
             // 
             this.btn_Add.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Add.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.ImageOptions.Image")));
-            this.btn_Add.Location = new System.Drawing.Point(77, 84);
+            this.btn_Add.Location = new System.Drawing.Point(22, 100);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(106, 36);
             this.btn_Add.TabIndex = 12;
@@ -191,7 +193,7 @@
             // txt_tenncc
             // 
             this.txt_tenncc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_tenncc.Location = new System.Drawing.Point(144, 42);
+            this.txt_tenncc.Location = new System.Drawing.Point(147, 57);
             this.txt_tenncc.Name = "txt_tenncc";
             this.txt_tenncc.Size = new System.Drawing.Size(154, 20);
             this.txt_tenncc.TabIndex = 11;
@@ -199,7 +201,7 @@
             // txt_mancc
             // 
             this.txt_mancc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_mancc.Location = new System.Drawing.Point(144, 12);
+            this.txt_mancc.Location = new System.Drawing.Point(147, 27);
             this.txt_mancc.Name = "txt_mancc";
             this.txt_mancc.Size = new System.Drawing.Size(154, 20);
             this.txt_mancc.TabIndex = 10;
@@ -207,7 +209,7 @@
             // labelControl2
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl2.Location = new System.Drawing.Point(45, 46);
+            this.labelControl2.Location = new System.Drawing.Point(48, 61);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(94, 13);
             this.labelControl2.TabIndex = 9;
@@ -216,17 +218,28 @@
             // labelControl1
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl1.Location = new System.Drawing.Point(48, 15);
+            this.labelControl1.Location = new System.Drawing.Point(51, 30);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(90, 13);
             this.labelControl1.TabIndex = 8;
             this.labelControl1.Text = "Mã Nhà Cung Cấp:";
             // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_refresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_refresh.ImageOptions.Image")));
+            this.btn_refresh.Location = new System.Drawing.Point(248, 101);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(108, 34);
+            this.btn_refresh.TabIndex = 37;
+            this.btn_refresh.Text = "Làm mới";
+            this.btn_refresh.Click += new System.EventHandler(this.Btn_refresh_Click);
+            // 
             // frm_NCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 554);
+            this.ClientSize = new System.Drawing.Size(611, 560);
             this.ControlBox = false;
             this.Controls.Add(this.tablePanel1);
             this.Name = "frm_NCC";
@@ -263,5 +276,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private DevExpress.XtraEditors.SimpleButton btn_refresh;
     }
 }

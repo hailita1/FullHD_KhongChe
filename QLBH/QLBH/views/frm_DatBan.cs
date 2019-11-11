@@ -96,6 +96,7 @@ namespace QLBH
             dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[4].Value);
             //dateTimePicker2.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             textEdit4.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            txt_LoaiBenh.Enabled = false;
         }
         private void Frm_DatBan_Load(object sender, EventArgs e)
         {
@@ -189,8 +190,6 @@ namespace QLBH
                 txt_LoaiBenh.Text = "";
                 comboBox1.Text = "";
                 textEdit4.Text = "";
-                dateTimePicker1.Text = "";
-                dateTimePicker2.Text = "";
                 comboBox2.Enabled = true;
             }
             else
@@ -258,6 +257,15 @@ namespace QLBH
             {
                 comboBox2.Items.Add(NV[i].MaNhanVien1);
             }
+        }
+
+        private void Btn_refresh_Click(object sender, EventArgs e)
+        {
+            comboBox2.Text = "";
+            txt_LoaiBenh.Text = "";
+            comboBox1.Text = "";
+            textEdit4.Text = "";
+            txt_LoaiBenh.Enabled = true;
         }
     }
 }

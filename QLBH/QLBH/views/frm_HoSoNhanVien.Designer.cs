@@ -57,6 +57,7 @@
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btn_refresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txt_tkma.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_tkten.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -77,7 +78,7 @@
             // labelControl2
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl2.Location = new System.Drawing.Point(720, 21);
+            this.labelControl2.Location = new System.Drawing.Point(723, 21);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(69, 13);
             this.labelControl2.TabIndex = 3;
@@ -86,7 +87,7 @@
             // txt_tkma
             // 
             this.txt_tkma.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_tkma.Location = new System.Drawing.Point(797, 18);
+            this.txt_tkma.Location = new System.Drawing.Point(800, 18);
             this.txt_tkma.Name = "txt_tkma";
             this.txt_tkma.Size = new System.Drawing.Size(100, 20);
             this.txt_tkma.TabIndex = 1;
@@ -94,7 +95,7 @@
             // txt_tkten
             // 
             this.txt_tkten.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_tkten.Location = new System.Drawing.Point(549, 18);
+            this.txt_tkten.Location = new System.Drawing.Point(552, 18);
             this.txt_tkten.Name = "txt_tkten";
             this.txt_tkten.Size = new System.Drawing.Size(156, 20);
             this.txt_tkten.TabIndex = 0;
@@ -121,7 +122,7 @@
             // labelControl7
             // 
             this.labelControl7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl7.Location = new System.Drawing.Point(359, 256);
+            this.labelControl7.Location = new System.Drawing.Point(360, 259);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(37, 13);
             this.labelControl7.TabIndex = 51;
@@ -130,7 +131,7 @@
             // labelControl19
             // 
             this.labelControl19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl19.Location = new System.Drawing.Point(102, 256);
+            this.labelControl19.Location = new System.Drawing.Point(103, 259);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(51, 13);
             this.labelControl19.TabIndex = 43;
@@ -140,6 +141,7 @@
             // 
             this.tablePanel1.SetColumn(this.panelControl2, 0);
             this.tablePanel1.SetColumnSpan(this.panelControl2, 2);
+            this.panelControl2.Controls.Add(this.btn_refresh);
             this.panelControl2.Controls.Add(this.button_timkiem);
             this.panelControl2.Controls.Add(this.button_themmoi);
             this.panelControl2.Controls.Add(this.button_capnhat);
@@ -149,14 +151,14 @@
             this.panelControl2.Location = new System.Drawing.Point(3, 3);
             this.panelControl2.Name = "panelControl2";
             this.tablePanel1.SetRow(this.panelControl2, 0);
-            this.panelControl2.Size = new System.Drawing.Size(1377, 47);
+            this.panelControl2.Size = new System.Drawing.Size(1383, 47);
             this.panelControl2.TabIndex = 12;
             // 
             // button_timkiem
             // 
             this.button_timkiem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button_timkiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("button_timkiem.ImageOptions.Image")));
-            this.button_timkiem.Location = new System.Drawing.Point(404, 7);
+            this.button_timkiem.Location = new System.Drawing.Point(293, 7);
             this.button_timkiem.Name = "button_timkiem";
             this.button_timkiem.Size = new System.Drawing.Size(100, 33);
             this.button_timkiem.TabIndex = 0;
@@ -167,7 +169,7 @@
             // 
             this.button_themmoi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button_themmoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("button_themmoi.ImageOptions.Image")));
-            this.button_themmoi.Location = new System.Drawing.Point(509, 7);
+            this.button_themmoi.Location = new System.Drawing.Point(398, 7);
             this.button_themmoi.Name = "button_themmoi";
             this.button_themmoi.Size = new System.Drawing.Size(100, 33);
             this.button_themmoi.TabIndex = 1;
@@ -178,7 +180,7 @@
             // 
             this.button_capnhat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button_capnhat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("button_capnhat.ImageOptions.Image")));
-            this.button_capnhat.Location = new System.Drawing.Point(616, 7);
+            this.button_capnhat.Location = new System.Drawing.Point(505, 7);
             this.button_capnhat.Name = "button_capnhat";
             this.button_capnhat.Size = new System.Drawing.Size(100, 33);
             this.button_capnhat.TabIndex = 2;
@@ -189,7 +191,7 @@
             // 
             this.button_xoa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button_xoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("button_xoa.ImageOptions.Image")));
-            this.button_xoa.Location = new System.Drawing.Point(722, 7);
+            this.button_xoa.Location = new System.Drawing.Point(725, 7);
             this.button_xoa.Name = "button_xoa";
             this.button_xoa.Size = new System.Drawing.Size(100, 33);
             this.button_xoa.TabIndex = 3;
@@ -200,7 +202,7 @@
             // 
             this.button_thoat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button_thoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("button_thoat.ImageOptions.Image")));
-            this.button_thoat.Location = new System.Drawing.Point(827, 7);
+            this.button_thoat.Location = new System.Drawing.Point(830, 7);
             this.button_thoat.Name = "button_thoat";
             this.button_thoat.Size = new System.Drawing.Size(100, 33);
             this.button_thoat.TabIndex = 4;
@@ -210,7 +212,7 @@
             // labelControl11
             // 
             this.labelControl11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl11.Location = new System.Drawing.Point(118, 225);
+            this.labelControl11.Location = new System.Drawing.Point(119, 228);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(34, 13);
             this.labelControl11.TabIndex = 35;
@@ -219,7 +221,7 @@
             // labelControl10
             // 
             this.labelControl10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl10.Location = new System.Drawing.Point(357, 198);
+            this.labelControl10.Location = new System.Drawing.Point(358, 201);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(40, 13);
             this.labelControl10.TabIndex = 34;
@@ -228,7 +230,7 @@
             // labelControl6
             // 
             this.labelControl6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl6.Location = new System.Drawing.Point(327, 167);
+            this.labelControl6.Location = new System.Drawing.Point(328, 170);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(71, 13);
             this.labelControl6.TabIndex = 30;
@@ -237,7 +239,7 @@
             // labelControl5
             // 
             this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl5.Location = new System.Drawing.Point(78, 167);
+            this.labelControl5.Location = new System.Drawing.Point(79, 170);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(75, 13);
             this.labelControl5.TabIndex = 29;
@@ -246,7 +248,7 @@
             // labelControl1
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl1.Location = new System.Drawing.Point(470, 21);
+            this.labelControl1.Location = new System.Drawing.Point(473, 21);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(73, 13);
             this.labelControl1.TabIndex = 2;
@@ -255,7 +257,7 @@
             // labelControl9
             // 
             this.labelControl9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl9.Location = new System.Drawing.Point(108, 195);
+            this.labelControl9.Location = new System.Drawing.Point(109, 198);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(48, 13);
             this.labelControl9.TabIndex = 33;
@@ -266,7 +268,7 @@
             this.cbb_gioitinh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbb_gioitinh.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.cbb_gioitinh.FormattingEnabled = true;
-            this.cbb_gioitinh.Location = new System.Drawing.Point(402, 192);
+            this.cbb_gioitinh.Location = new System.Drawing.Point(403, 195);
             this.cbb_gioitinh.Name = "cbb_gioitinh";
             this.cbb_gioitinh.Size = new System.Drawing.Size(136, 21);
             this.cbb_gioitinh.TabIndex = 26;
@@ -275,7 +277,7 @@
             // txt_dienthoai
             // 
             this.txt_dienthoai.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_dienthoai.Location = new System.Drawing.Point(161, 253);
+            this.txt_dienthoai.Location = new System.Drawing.Point(162, 256);
             this.txt_dienthoai.Name = "txt_dienthoai";
             this.txt_dienthoai.Size = new System.Drawing.Size(143, 20);
             this.txt_dienthoai.TabIndex = 16;
@@ -283,7 +285,7 @@
             // txt_diachi
             // 
             this.txt_diachi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_diachi.Location = new System.Drawing.Point(161, 222);
+            this.txt_diachi.Location = new System.Drawing.Point(162, 225);
             this.txt_diachi.Name = "txt_diachi";
             this.txt_diachi.Size = new System.Drawing.Size(377, 20);
             this.txt_diachi.TabIndex = 4;
@@ -291,7 +293,7 @@
             // txt_manv
             // 
             this.txt_manv.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_manv.Location = new System.Drawing.Point(402, 164);
+            this.txt_manv.Location = new System.Drawing.Point(403, 167);
             this.txt_manv.Name = "txt_manv";
             this.txt_manv.Size = new System.Drawing.Size(137, 20);
             this.txt_manv.TabIndex = 2;
@@ -315,17 +317,17 @@
             this.groupControl1.Controls.Add(this.txt_tennv);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl1.Location = new System.Drawing.Point(752, 114);
+            this.groupControl1.Location = new System.Drawing.Point(755, 114);
             this.groupControl1.Name = "groupControl1";
             this.tablePanel1.SetRow(this.groupControl1, 2);
-            this.groupControl1.Size = new System.Drawing.Size(628, 475);
+            this.groupControl1.Size = new System.Drawing.Size(631, 481);
             this.groupControl1.TabIndex = 8;
             this.groupControl1.Text = "Chi Tiết Nhân Viên";
             // 
             // txt_tennv
             // 
             this.txt_tennv.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_tennv.Location = new System.Drawing.Point(161, 164);
+            this.txt_tennv.Location = new System.Drawing.Point(162, 167);
             this.txt_tennv.Name = "txt_tennv";
             this.txt_tennv.Size = new System.Drawing.Size(143, 20);
             this.txt_tennv.TabIndex = 0;
@@ -346,7 +348,7 @@
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 53F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 58F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel1.Size = new System.Drawing.Size(1383, 592);
+            this.tablePanel1.Size = new System.Drawing.Size(1389, 598);
             this.tablePanel1.TabIndex = 3;
             // 
             // dataGridView1
@@ -363,7 +365,7 @@
             this.tablePanel1.SetRow(this.dataGridView1, 2);
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(743, 475);
+            this.dataGridView1.Size = new System.Drawing.Size(746, 481);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.DataGridView1_DoubleClick);
             // 
@@ -381,14 +383,25 @@
             this.panelControl1.Location = new System.Drawing.Point(3, 56);
             this.panelControl1.Name = "panelControl1";
             this.tablePanel1.SetRow(this.panelControl1, 1);
-            this.panelControl1.Size = new System.Drawing.Size(1377, 52);
+            this.panelControl1.Size = new System.Drawing.Size(1383, 52);
             this.panelControl1.TabIndex = 6;
+            // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_refresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_refresh.ImageOptions.Image")));
+            this.btn_refresh.Location = new System.Drawing.Point(611, 6);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(108, 34);
+            this.btn_refresh.TabIndex = 36;
+            this.btn_refresh.Text = "Làm mới";
+            this.btn_refresh.Click += new System.EventHandler(this.Btn_refresh_Click);
             // 
             // frm_HoSoNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1383, 592);
+            this.ClientSize = new System.Drawing.Size(1389, 598);
             this.ControlBox = false;
             this.Controls.Add(this.tablePanel1);
             this.Name = "frm_HoSoNhanVien";
@@ -445,5 +458,6 @@
         private DevExpress.XtraEditors.SimpleButton button_xoa;
         private DevExpress.XtraEditors.SimpleButton button_thoat;
         private DevExpress.XtraEditors.TextEdit txt_tennv;
+        private DevExpress.XtraEditors.SimpleButton btn_refresh;
     }
 }

@@ -241,5 +241,12 @@ namespace QLBH
                 comboBox2.Items.Add(NL[i].MaNguyenLieu1);
             }
         }
+
+        private void Btn_refresh_Click(object sender, EventArgs e)
+        {
+            comboBox1.Text = "";
+            comboBox2.Text = "";
+            textEdit2.Text = "";
+        }
     }
 }

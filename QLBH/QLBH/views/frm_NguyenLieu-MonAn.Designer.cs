@@ -53,6 +53,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_refresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
@@ -83,7 +84,7 @@
             this.panelControl1.Location = new System.Drawing.Point(3, 3);
             this.panelControl1.Name = "panelControl1";
             this.tablePanel1.SetRow(this.panelControl1, 0);
-            this.panelControl1.Size = new System.Drawing.Size(615, 153);
+            this.panelControl1.Size = new System.Drawing.Size(621, 153);
             this.panelControl1.TabIndex = 17;
             // 
             // tablePanel2
@@ -98,7 +99,7 @@
             this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 159F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel2.Size = new System.Drawing.Size(611, 149);
+            this.tablePanel2.Size = new System.Drawing.Size(617, 149);
             this.tablePanel2.TabIndex = 23;
             // 
             // dataGridView2
@@ -119,6 +120,7 @@
             // panelControl2
             // 
             this.tablePanel2.SetColumn(this.panelControl2, 0);
+            this.panelControl2.Controls.Add(this.btn_refresh);
             this.panelControl2.Controls.Add(this.comboBox2);
             this.panelControl2.Controls.Add(this.comboBox1);
             this.panelControl2.Controls.Add(this.textEdit2);
@@ -133,7 +135,7 @@
             this.panelControl2.Location = new System.Drawing.Point(3, 3);
             this.panelControl2.Name = "panelControl2";
             this.tablePanel2.SetRow(this.panelControl2, 0);
-            this.panelControl2.Size = new System.Drawing.Size(605, 153);
+            this.panelControl2.Size = new System.Drawing.Size(611, 153);
             this.panelControl2.TabIndex = 17;
             // 
             // comboBox2
@@ -157,7 +159,7 @@
             // textEdit2
             // 
             this.textEdit2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textEdit2.Location = new System.Drawing.Point(211, 79);
+            this.textEdit2.Location = new System.Drawing.Point(214, 79);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Size = new System.Drawing.Size(225, 20);
             this.textEdit2.TabIndex = 18;
@@ -166,7 +168,7 @@
             // labelControl4
             // 
             this.labelControl4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl4.Location = new System.Drawing.Point(160, 82);
+            this.labelControl4.Location = new System.Drawing.Point(163, 82);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(45, 13);
             this.labelControl4.TabIndex = 17;
@@ -176,7 +178,7 @@
             // 
             this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(305, 112);
+            this.simpleButton2.Location = new System.Drawing.Point(370, 108);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(108, 36);
             this.simpleButton2.TabIndex = 16;
@@ -187,7 +189,7 @@
             // 
             this.simpleButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(419, 112);
+            this.simpleButton3.Location = new System.Drawing.Point(484, 108);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(108, 36);
             this.simpleButton3.TabIndex = 15;
@@ -198,7 +200,7 @@
             // 
             this.simpleButton4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(191, 112);
+            this.simpleButton4.Location = new System.Drawing.Point(142, 108);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(108, 36);
             this.simpleButton4.TabIndex = 13;
@@ -209,7 +211,7 @@
             // 
             this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(79, 112);
+            this.simpleButton1.Location = new System.Drawing.Point(30, 108);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(106, 36);
             this.simpleButton1.TabIndex = 12;
@@ -219,7 +221,7 @@
             // labelControl5
             // 
             this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl5.Location = new System.Drawing.Point(129, 52);
+            this.labelControl5.Location = new System.Drawing.Point(132, 52);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(76, 13);
             this.labelControl5.TabIndex = 9;
@@ -228,7 +230,7 @@
             // labelControl6
             // 
             this.labelControl6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl6.Location = new System.Drawing.Point(152, 22);
+            this.labelControl6.Location = new System.Drawing.Point(155, 22);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(53, 13);
             this.labelControl6.TabIndex = 8;
@@ -237,7 +239,7 @@
             // labelControl3
             // 
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl3.Location = new System.Drawing.Point(165, 82);
+            this.labelControl3.Location = new System.Drawing.Point(168, 82);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(45, 13);
             this.labelControl3.TabIndex = 17;
@@ -247,7 +249,7 @@
             // 
             this.btn_Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.ImageOptions.Image")));
-            this.btn_Delete.Location = new System.Drawing.Point(310, 112);
+            this.btn_Delete.Location = new System.Drawing.Point(313, 112);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(108, 36);
             this.btn_Delete.TabIndex = 16;
@@ -258,7 +260,7 @@
             // 
             this.btn_close.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_close.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.ImageOptions.Image")));
-            this.btn_close.Location = new System.Drawing.Point(424, 112);
+            this.btn_close.Location = new System.Drawing.Point(427, 112);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(108, 36);
             this.btn_close.TabIndex = 15;
@@ -269,7 +271,7 @@
             // 
             this.btn_refesrh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_refesrh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_refesrh.ImageOptions.Image")));
-            this.btn_refesrh.Location = new System.Drawing.Point(196, 112);
+            this.btn_refesrh.Location = new System.Drawing.Point(199, 112);
             this.btn_refesrh.Name = "btn_refesrh";
             this.btn_refesrh.Size = new System.Drawing.Size(108, 36);
             this.btn_refesrh.TabIndex = 13;
@@ -280,7 +282,7 @@
             // 
             this.btn_Add.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Add.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.ImageOptions.Image")));
-            this.btn_Add.Location = new System.Drawing.Point(84, 112);
+            this.btn_Add.Location = new System.Drawing.Point(87, 112);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(106, 36);
             this.btn_Add.TabIndex = 12;
@@ -290,7 +292,7 @@
             // txt_STT
             // 
             this.txt_STT.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_STT.Location = new System.Drawing.Point(216, 49);
+            this.txt_STT.Location = new System.Drawing.Point(219, 49);
             this.txt_STT.Name = "txt_STT";
             this.txt_STT.Size = new System.Drawing.Size(59, 20);
             this.txt_STT.TabIndex = 11;
@@ -298,7 +300,7 @@
             // labelControl2
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl2.Location = new System.Drawing.Point(134, 52);
+            this.labelControl2.Location = new System.Drawing.Point(137, 52);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(76, 13);
             this.labelControl2.TabIndex = 9;
@@ -307,7 +309,7 @@
             // labelControl1
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl1.Location = new System.Drawing.Point(157, 22);
+            this.labelControl1.Location = new System.Drawing.Point(160, 22);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(53, 13);
             this.labelControl1.TabIndex = 8;
@@ -326,7 +328,7 @@
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 159F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel1.Size = new System.Drawing.Size(621, 571);
+            this.tablePanel1.Size = new System.Drawing.Size(627, 577);
             this.tablePanel1.TabIndex = 22;
             // 
             // dataGridView1
@@ -343,15 +345,26 @@
             this.tablePanel1.SetRow(this.dataGridView1, 1);
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(615, 406);
+            this.dataGridView1.Size = new System.Drawing.Size(621, 412);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.DataGridView1_DoubleClick);
+            // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_refresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_refresh.ImageOptions.Image")));
+            this.btn_refresh.Location = new System.Drawing.Point(256, 109);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(108, 34);
+            this.btn_refresh.TabIndex = 37;
+            this.btn_refresh.Text = "Làm mới";
+            this.btn_refresh.Click += new System.EventHandler(this.Btn_refresh_Click);
             // 
             // frm_NguyenLieu_MonAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 571);
+            this.ClientSize = new System.Drawing.Size(627, 577);
             this.ControlBox = false;
             this.Controls.Add(this.tablePanel1);
             this.Name = "frm_NguyenLieu_MonAn";
@@ -400,5 +413,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.SimpleButton btn_refresh;
     }
 }

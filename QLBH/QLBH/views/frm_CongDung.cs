@@ -146,6 +146,14 @@ namespace QLBH
         {
             txt_LoaiBenh.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txt_STT.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txt_LoaiBenh.Enabled = false;
+        }
+
+        private void Btn_refresh_Click(object sender, EventArgs e)
+        {
+            txt_LoaiBenh.Text = "";
+            txt_LoaiBenh.Enabled = true;
+            txt_STT.Text = "";
         }
     }
 }

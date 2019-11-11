@@ -295,5 +295,13 @@ namespace QLBH
                 comboBox2.Items.Add(nhaCungCap[i].MaNhaCungCap1);
             }
         }
+
+        private void Btn_refresh_Click(object sender, EventArgs e)
+        {
+            txt_MaHoaDon.Text = "";
+            txt_TongTien.Text = "";
+            comboBox1.Text = "";
+            comboBox2.Text = "";
+        }
     }
 }

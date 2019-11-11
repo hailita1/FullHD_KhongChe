@@ -363,3 +363,48 @@ from PhieuDatBan, Khach, NhanVien
 where PhieuDatBan.MaKhach=Khach.MaKhach and PhieuDatBan.MaNhanVien=NhanVien.MaNhanVien
 
 select * from BaoCaoPDB
+
+---------------------
+create proc [dbo].[RpThang] @thang int, @nam int
+as
+begin
+	select @thang as thang, @nam as Nam , sum((SoLuong*MonAn.DonGia) - GiamGia) as ThanhTien
+	from PhieuDatBan, ChiTietPhieuDB, MonAn
+	where PhieuDatBan.MaPhieu = ChiTietPhieuDB.MaPhieu and ChiTietPhieuDB.MaMonAn = MonAn.MaMonAn and MONTH(NgayDat) = @thang and YEAR(NgayDat) = @nam
+	group by MONTH(NgayDat)
+end
+
+---------------------
+create proc [dbo].[RpQuy] @quy nvarchar(50),@thang_1st int, @thang_2nd int,@thang_3rd int, @nam int
+	as
+	begin
+		select  @quy as Quy ,@nam as Nam , sum(PhieuDatBan.TongTien) as TongTien
+		from PhieuDatBan
+		where (MONTH(NgayDat) =@thang_1st or MONTH(NgayDat) =@thang_2nd or MONTH(NgayDat) =@thang_3rd)  and YEAR(NgayDat) = @nam
+		group by year(NgayDat)
+	end
+
+---------------------------
+create proc [dbo].[RpNam] @nam int
+	as
+	begin
+	select @nam as Nam, sum(TongTien) as ThanhTien
+	from PhieuDatBan
+	where YEAR(NgayDat) = @nam
+	end
+
+------------------------------
+create proc [dbo].[RpPDB]
+	@mapdb nvarchar(50)
+	as
+	begin
+		select * from PhieuDatBan where MaPhieu = @mapdb
+	end
+
+----------------------
+create proc [dbo].[RpMonAn]
+	@mama nvarchar(50)
+	as
+	begin
+		select * from MonAn where MaMonAn = @mama
+	end

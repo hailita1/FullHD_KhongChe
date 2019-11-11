@@ -176,5 +176,14 @@ namespace QLBH
                 this.Close();
             }
         }
+
+        private void Btn_refresh_Click(object sender, EventArgs e)
+        {
+            txt_diachincc.Text = "";
+            txt_dienthoaincc.Text = "";
+            txt_mancc.Text = "";
+            txt_mancc.Enabled = true;
+            txt_tenncc.Text = "";
+        }
     }
 }

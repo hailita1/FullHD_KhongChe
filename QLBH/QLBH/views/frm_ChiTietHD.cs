@@ -27,6 +27,8 @@ namespace QLBH
             InitializeComponent();
             hoaDonNhap = new frm_HoaDon().Select();
             nguyenLieu = new frm_NguyenLieu().Select();
+            fill();
+            add();
             this.cb_mahd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_manl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         }
@@ -172,8 +174,10 @@ namespace QLBH
 
         private void DataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            cb_mahd.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            cb_manl.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            cb_mahd.Enabled = false;
+            cb_manl.Enabled = false;
+            cb_manl.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            cb_mahd.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txt_SoLuong.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             txt_DonGia.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             txt_KhuyenMai.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
@@ -257,6 +261,19 @@ namespace QLBH
             {
                 e.Handled = true;
             }
+        }
+
+        private void Btn_refresh_Click(object sender, EventArgs e)
+        {
+            cb_mahd.Text = "";
+            cb_mahd.Enabled = true;
+            cb_manl.Text = "";
+            cb_manl.Enabled = true;
+            txt_DonGia.Text = "";
+            txt_KhuyenMai.Text = "";
+            txt_SoLuong.Text = "";
+            txt_ThanhTien.Text = "";
+
         }
     }
 }

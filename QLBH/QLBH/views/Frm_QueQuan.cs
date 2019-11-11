@@ -187,5 +187,12 @@ namespace QLBH
             txt_MaQue.Enabled = false;
 
         }
+
+        private void Btn_refresh_Click(object sender, EventArgs e)
+        {
+            txt_MaQue.Text = "";
+            txt_MaQue.Enabled = true;
+            txt_TenQue.Text = "";
+        }
     }
 }

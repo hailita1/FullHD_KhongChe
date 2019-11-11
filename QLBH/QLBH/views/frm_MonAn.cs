@@ -276,6 +276,7 @@ namespace QLBH
             textBox1.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             textEdit7.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             textEdit8.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            textEdit5.Enabled = false;
         }
 
         private void Frm_MonAn_Load(object sender, EventArgs e)
@@ -327,6 +328,18 @@ namespace QLBH
                 textEdit4.Items.Add(CD[i].MaCongDung1);
                 textEdit9.Items.Add(CD[i].MaCongDung1);
             }
+        }
+
+        private void Btn_refresh_Click(object sender, EventArgs e)
+        {
+            textEdit3.Text = "";
+            textEdit4.Text = "";
+            textEdit5.Text = "";
+            textEdit6.Text = "";
+            textBox1.Text = "";
+            textEdit7.Text = "";
+            textEdit8.Text = "";
+            textEdit5.Enabled = true;
         }
     }
 }

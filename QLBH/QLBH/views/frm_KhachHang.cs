@@ -164,5 +164,14 @@ namespace QLBH
             fill();
             txt_MaKhach.Focus();
         }
+
+        private void Btn_refresh_Click(object sender, EventArgs e)
+        {
+            txt_DiaChi.Text = "";
+            txt_DienThoai.Text = "";
+            txt_MaKhach.Text = "";
+            txt_TenKhach.Text = "";
+            txt_MaKhach.Enabled = true;
+        }
     }
 }

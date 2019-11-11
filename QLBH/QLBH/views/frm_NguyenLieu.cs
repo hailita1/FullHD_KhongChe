@@ -252,5 +252,19 @@ namespace QLBH
                 MessageBox.Show("Vui lòng nhập dữ liệu tìm kiếm!", "Thông báo");
             }
         }
+
+        private void Btn_refresh_Click(object sender, EventArgs e)
+        {
+            txt_ccdtk.Text = "";
+            txt_chongchidinh.Text = "";
+            txt_congdung.Text = "";
+            txt_dongiaban.Text = "";
+            txt_dongianhap.Text = "";
+            txt_donvitinh.Text = "";
+            txt_manl.Text = "";
+            txt_soluong.Text = "";
+            txt_tennl.Text = "";
+            txt_manl.Enabled = true;
+        }
     }
 }

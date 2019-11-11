@@ -254,5 +254,16 @@ namespace QLBH
                 cb_maque.Items.Add(list_que[i].MaQue1);
             }
         }
+
+        private void Btn_refresh_Click(object sender, EventArgs e)
+        {
+            txt_diachi.Text = "";
+            txt_dienthoai.Text = "";
+            txt_manv.Text = "";
+            txt_tennv.Text = "";
+            cbb_gioitinh.Text = "";
+            cb_maque.Text = "";
+            txt_manv.Enabled = true;
+        }
     }
 }
