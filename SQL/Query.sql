@@ -1,9 +1,43 @@
 ﻿--yêu cầu:
 --trong sql, sửa khuyến mãi sang float trong table chi tiết hóa đơn nhập
 --trong sql, sửa giảm giá sang float trong table chi tiết phiếu đặt bàn
+create trigger DeleteNV on Que
+for delete
+as
+begin
+	delete from NhanVien where MaQue in (select MaQue from deleted)
+end
+
+create trigger DeletePDB1 on NhanVien
+for delete
+as
+begin
+	delete from PhieuDatBan where MaNhanVien in (select MaNhanVien from deleted)
+end
+
+create trigger DeletePDB2 on Khach
+for delete
+as
+begin
+	delete from PhieuDatBan where MaKhach in (select MaKhach from deleted)
+end
+
 --form nhân viên: mã quê là combobox, ngày sinh là datetime
+create trigger DeleteHDN on NhanVien
+for delete
+as
+begin
+	delete from HoaDonNhap where MaNhanVien in (select MaNhanVien from deleted)
+end
 --form đặt bàn: mã khách và mã nhân viên là combobox, ngày đặt và ngày dùng là datetime, tổng tiền không cho nhập
 use QLNhaHang
+create trigger DeleteChiTietPDB on PhieuDatBan
+for delete
+as
+begin
+	delete from ChiTietPhieuDB where MaPhieu in (select MaPhieu from deleted)
+end
+
 create trigger TinhTongTien on ChiTietPhieuDB
 for insert, update
 as
@@ -72,6 +106,36 @@ declare @tien1 float
 exec ThanhTien '001', '001', @tien1 output
 
 --form món ăn: mã công dụng - mã loại là combobox, đơn giá không cho nhập
+create trigger DeleteMaLoai on LoaiMon
+for delete
+as
+begin
+	delete from MonAn where MaLoai in (select MaLoai from deleted)
+end
+
+create trigger DeleteMaCongDung on CongDung
+for delete
+as
+begin
+	delete from MonAn where MaCongDung in (select MaCongDung from deleted)
+end
+
+create trigger DeleteNguyenLieuMonAn on MonAn
+for delete
+as
+begin
+	delete from NguyenLieu_MonAn where MaMonAn in (select MaMonAn from deleted)
+end
+
+create trigger DeleteChiTietPDN on MonAn
+for delete
+as
+begin
+	delete from ChiTietPhieuDB where MaMonAn in (select MaMonAn from deleted)
+end
+
+
+
 create proc DonGia @mamon varchar(50), @dongia float output
 as
 begin
@@ -84,6 +148,20 @@ exec DonGia '001', @gia output
 
 --form nguyên liệu món ăn: mã món ăn - mã nguyên liệu là combobox, số lượng chỉ cho nhập số
 --form nguyên liệu: số lượng không cho nhập, đơn giá nhập-bán không cho nhập
+create trigger DeleteNguyenLieuMonAn1 on NguyenLieu
+for delete
+as
+begin
+	delete from NguyenLieu_MonAn where MaNguyenLieu in (select MaNguyenLieu from deleted)
+end
+
+create trigger DeleteNguyenLieu on ChiTietHoaDonNhap
+for delete
+as
+begin
+	delete from NguyenLieu where MaNguyenLieu in (select MaNguyenLieu from deleted)
+end
+
 create proc SoLuong @manl varchar(50), @sl float output, @gianhap float output, @giaban float output
 as
 begin
@@ -95,6 +173,20 @@ declare @sl1 float, @gianhap1 float, @giaban1 float
 exec SoLuong '001', @sl1 output, @gianhap1 output, @giaban1 output
 
 --form hóa đơn: ngày nhập là datetime, mã nhân viên - mã nhà cung cấp là combobox, tổng tiền không cho nhập
+create trigger DeleteChiTietHDN on HoaDonNhap
+for delete
+as
+begin
+	delete from ChiTietHoaDonNhap where MaHoaDonNhap in (select MaHoaDonNhap from deleted)
+end
+
+create trigger DeleteHDN1 on NhaCungCap
+for delete
+as
+begin
+	delete from HoaDonNhap where MaNhaCungCap in (select MaNhaCungCap from deleted)
+end
+
 create trigger TinhTongTienHDN on ChiTietHoaDonNhap
 for insert, update
 as
